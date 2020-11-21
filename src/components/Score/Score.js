@@ -18,7 +18,7 @@ const Score = props => {
   const saveScore = (userScore, userName) => {
     
     const temp = {};
-    temp.userName = userName;
+    temp.userName = userName  || 'no name';
     temp.score = userScore;
   
     return temp;

@@ -24,7 +24,7 @@ const Leaderboard = () => {
 
       getContainerRef.current.style.right = '0rem';
     } else {
-      getContainerRef.current.style.right = '-25rem';
+      getContainerRef.current.style.right = '-15rem';
     }
 
      
@@ -38,9 +38,13 @@ const Leaderboard = () => {
 
     const sortedUser = users.sort((a, b) => b.score - a.score);
 
-    return sortedUser.map((el, index) => {
+    const limitUsers = [];
+    limitUsers.push(...sortedUser);
+    limitUsers.length = 15;
+
+    return limitUsers.map((el, index) => {
         return (
-          <li key={ index }> <strong>{ el.userName }</strong> <code>{ el.score }</code></li>
+          <li key={ index }> { index + 1 }: { el.userName } - <code>{ el.score }</code></li>
           )
     })
   }
