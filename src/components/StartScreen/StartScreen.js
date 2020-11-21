@@ -14,7 +14,8 @@ const StartScreen = () => {
 
       {!isStarted ?
         <div className="start-screen">
-          <p className="text">Hello there, this tiny app was made to check your finger speed :)</p>
+          <p className="text">Hello there, this tiny game was made to have fun with friends</p>
+          <p className="text">Rules : you have 5 sec to press Space button as much as you can :)</p>
           <div>
           <button className="btn" onClick={() => dispatch(start())}>Start</button>
           </div>
